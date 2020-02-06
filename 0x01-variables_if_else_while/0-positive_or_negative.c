@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-/* betty style doc for function main goes there */
+/**
+* main - this is a description for main
+* Return: integer
+*/
 int main(void)
 {
 int n;
