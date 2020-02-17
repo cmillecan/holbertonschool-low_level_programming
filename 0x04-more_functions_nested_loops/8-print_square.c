@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
-* print_square - pints a square
+* print_square - prints a square
 * @size: is the first argument
-* Return: void
+* Return: int
 */
 
 void print_square(int size)
