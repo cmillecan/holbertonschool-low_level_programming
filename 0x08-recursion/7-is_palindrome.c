@@ -1,11 +1,9 @@
 #include "holberton.h"
 
 /**
- * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
+ * _strlen_recursion - string length
  * @s: string
  * Return: int
- * _strlen_recursion - string length
- * p_loop - loop for palindrome function
  */
 
 int _strlen_recursion(char *s)
@@ -20,9 +18,21 @@ int _strlen_recursion(char *s)
 	}
 }
 
+/**
+ * p_loop - loop for palindrome function
+ * @s: string
+ * @l: int
+ * @h: int
+ *Return: int
+ */
+
 int p_loop(char *s, int l, int h)
 {
 	if (h == l)
+	{
+		return (1);
+	}
+	if (!*s)
 	{
 		return (1);
 	}
@@ -30,11 +40,18 @@ int p_loop(char *s, int l, int h)
 	{
 		return (0);
 	}
-	else
+	if (l < h + 1)
 	{
-		return (1);
+		return (p_loop(s, l + 1, h - 1));
 	}
+	return (1);
 }
+
+/**
+ * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
+ * @s: string
+ * Return: int
+ */
 
 int is_palindrome(char *s)
 {
