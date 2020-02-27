@@ -4,6 +4,8 @@
  * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
  * @s: string
  * Return: int
+ * _strlen_recursion - string length
+ * p_loop - loop for palindrome function
  */
 
 int _strlen_recursion(char *s)
@@ -20,11 +22,7 @@ int _strlen_recursion(char *s)
 
 int p_loop(char *s, int l, int h)
 {
-	if (h > l)
-	{
-		return (1);
-	}
-	if (!*s)
+	if (h == l)
 	{
 		return (1);
 	}
@@ -34,7 +32,7 @@ int p_loop(char *s, int l, int h)
 	}
 	else
 	{
-		return (0);
+		return (1);
 	}
 }
 
