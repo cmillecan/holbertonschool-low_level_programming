@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+
 int isNumber(char *);
 
 /**
@@ -38,7 +39,7 @@ int main(int argc, char *argv[])
 }
 
 /**
- * isNumber - checks if it is a number
+ * isNumber - checks if str is a number
  * @str: string
  * Return: int
  */
