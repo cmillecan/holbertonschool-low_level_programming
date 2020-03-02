@@ -1,5 +1,6 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 int isNumber(char *);
 
@@ -17,7 +18,7 @@ int main(int argc, char *argv[])
 
 	sum = 0;
 
-	if (argc <= 1)
+	if (argc == 1)
 	{
 		printf("%d\n", 0);
 		return (0);
@@ -45,18 +46,20 @@ int main(int argc, char *argv[])
  */
 int isNumber(char *str)
 {
-	int num;
+	int len;
 	int i;
 
-	num = atoi(str);
-	if (num == 0)
+	len = 0;
+
+	while (str[len])
 	{
-		for (i = 0; str[i] != '\0'; i++)
+		len++;
+	}
+	for (i = 0; i < len; i++)
+	{
+		if (!isdigit(str[i]))
 		{
-			if (str[i] < '0' || str[i] > '9')
-			{
-				return (0);
-			}
+			return (0);
 		}
 	}
 
