@@ -46,22 +46,20 @@ int main(int argc, char *argv[])
  */
 int isNumber(char *str)
 {
-	int len;
+	int num;
 	int i;
 
-	len = 0;
+	num = atoi(str);
 
-	while (str[len])
+	if (num == 0)
 	{
-		len++;
-	}
-	for (i = 0; i < len; i++)
-	{
-		if (!isdigit(str[i]))
+		for (i = 0; str[i] != '\0'; i++)
 		{
-			return (0);
+			if (!isdigit(str[i]))
+			{
+				return (0);
+			}
 		}
 	}
-
 	return (1);
 }
