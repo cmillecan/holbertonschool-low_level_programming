@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - multiplies two numbers
  * @argc: argument count
  * @argv: array of pointers to a string
  * Return: int

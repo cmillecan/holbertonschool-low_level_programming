@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - prints all arguments received
  * @argc: argument count
  * @argv: array of pointers to a string
  * Return: int

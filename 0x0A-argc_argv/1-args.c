@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - prints the number of arguments passed
  * @argc: argument count
  * @argv: array of pointers to a string
  * Return: int
