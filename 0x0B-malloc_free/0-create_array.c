@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * create_array - creates an array of chars
@@ -10,6 +11,23 @@
 
 char *create_array(unsigned int size, char c)
 {
-	free()
-	return (0);
+	char *s;
+	unsigned int i;
+
+	s = malloc(sizeof(char) * size);
+
+	for (i = 0; i < size; i++)
+	{
+		s[i] = c;
+	}
+	if (size == 0)
+	{
+		return (NULL);
+	}
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+
+	return (s);
 }
