@@ -36,8 +36,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int count, len1, len2;
 
 	count = 0;
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
 
 	if (s1 == NULL)
 	{
@@ -47,6 +45,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
+
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+
 	if (n >= len2)
 	{
 		n = len2;
