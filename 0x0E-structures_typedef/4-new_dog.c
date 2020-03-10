@@ -29,8 +29,8 @@ unsigned int _strlen(char *s)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char nameL;
-	char ownerL;
+	int nameL;
+	int ownerL;
 	int i, j;
 	dog_t *new;
 
