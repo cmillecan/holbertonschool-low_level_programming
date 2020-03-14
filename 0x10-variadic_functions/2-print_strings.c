@@ -14,11 +14,21 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_list opArgs;
 	unsigned int i;
+	char *currentArg;
 
 	va_start(opArgs, n);
 	for (i = 0; i < n; i++)
 	{
-		printf("%s", va_arg(opArgs, char*));
+		currentArg = va_arg(opArgs, char*);
+		if (currentArg == NULL)
+		{
+			printf("(nil)");
+		}
+		else
+		{
+			printf("%s", currentArg);
+		}
+
 		if (i != (n - 1) && separator != NULL)
 		{
 			printf("%s", separator);
