@@ -7,15 +7,14 @@
  * @format: a list of types of arguments passed to the function
  * Return: void
 */
-
 void print_all(const char * const format, ...)
 {
 	va_list optArgs;
 	int i;
+	int peak;
 	char *str;
 
 	va_start(optArgs, format);
-
 	i = 0;
 	while (format[i] != '\0')
 	{
@@ -33,15 +32,18 @@ void print_all(const char * const format, ...)
 			case 's':
 				str = va_arg(optArgs, char *);
 				if (str == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
+					str = "(nil)";
 				printf("%s", str);
-				break;
 		}
+
+		peak = i + 1;
+		if (format[peak] != '\0' &&
+			(format[i] == 'c' ||
+			format[i] == 'i' ||
+			format[i] == 'f' ||
+			format[i] == 's'))
+			printf(", ");
 		i++;
 	}
-
 	printf("\n");
 }
