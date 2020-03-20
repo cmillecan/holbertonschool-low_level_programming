@@ -11,21 +11,21 @@
  */
 size_t list_len(const list_t *h)
 {
-        list_t *currentNode;
-        size_t total = 0;
+	list_t *currentNode;
+	size_t total = 0;
 
-        if (h == NULL)
-        {
-                return (0);
-        }
-        total++;
+	if (h == NULL)
+	{
+		return (0);
+	}
+	total++;
 
-        currentNode = h->next;
-        while (currentNode != NULL)
-        {
-                total++;
-                currentNode = currentNode->next;
-        }
+	currentNode = h->next;
+	while (currentNode != NULL)
+	{
+		total++;
+		currentNode = currentNode->next;
+	}
 
-        return (total);
+	return (total);
 }
