@@ -17,12 +17,12 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		exit(98);
 	}
+	printf("%d\n", head->n);
 	total++;
 
 	currentNode = head->next;
 	while (currentNode != NULL)
 	{
-		printf("%s\n", currentNode);
 		total++;
 		currentNode = currentNode->next;
 	}
