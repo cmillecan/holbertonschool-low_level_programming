@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-
 /**
  * insert_nodeint_at_index - inserts a new node at a given position
  * @head: head
@@ -17,11 +16,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	newNode = malloc(sizeof(listint_t));
 	if (newNode == NULL)
-	{
 		return (NULL);
-	}
 	newNode->n = n;
-
 	if (head != NULL && *head == NULL)
 	{
 		if (idx == 0)
@@ -32,9 +28,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		free(newNode);
 		return (NULL);
 	}
+	if (idx == 0)
+	{
+		temp = (*head)->next;
+		*head = newNode;
+		newNode->next = temp;
+		return (newNode);
+	}
 	while (currentNode != NULL)
 	{
-		if (idx == 0 || count == idx)
+		if (count == idx)
 		{
 			temp = currentNode->next;
 			currentNode->next = newNode;
@@ -45,6 +48,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		currentNode = currentNode->next;
 	}
 	free(newNode);
-
 	return (NULL);
 }
