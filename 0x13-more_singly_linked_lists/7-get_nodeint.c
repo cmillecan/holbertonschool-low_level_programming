@@ -23,11 +23,11 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	{
 		if (count == index)
 		{
-			return (currentNode->next);
+			return (currentNode);
 		}
 		count++;
 		currentNode = currentNode->next;
 	}
 
-	return (currentNode);
+	return (NULL);
 }
