@@ -24,11 +24,11 @@ int create_file(const char *filename, char *text_content)
 		return (1);
 	}
 
-	for (i = 0; text_content[i] != '\0'; i++)
+	for (len = 0; text_content[len] != '\0'; len++)
 	{
 	}
 
-	writenum = write(fd, text_content, i);
+	writenum = write(fd, text_content, len);
 
 	if (writenum == -1)
 		return (-1);
